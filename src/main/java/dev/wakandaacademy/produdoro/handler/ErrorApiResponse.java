@@ -7,11 +7,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
-@Builder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
+@Builder
 public class ErrorApiResponse {
 	private String message;
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private String description;
+	
+	public ErrorApiResponse() {
+		
+	}
 }
