@@ -8,6 +8,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import dev.wakandaacademy.produdoro.pomodoro.domain.ConfiguracaoPadrao;
+import dev.wakandaacademy.produdoro.usuario.application.api.UsuarioNovoRequest;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,4 +32,10 @@ public class Usuario {
 	private StatusUsuario status = StatusUsuario.FOCO;
 	@Builder.Default
 	private Integer quantidadePomodorosPausaCurta = 0;
+
+	public Usuario(UsuarioNovoRequest usuarioNovo, ConfiguracaoPadrao configuracaoPadrao) {
+		this.email = usuarioNovo.getEmail();
+		this.status = StatusUsuario.FOCO;
+		this.configuracao = new ConfiguracaoUsuario(configuracaoPadrao);
+	}
 }

@@ -1,4 +1,4 @@
-package dev.wakandaacademy.produdoro.crendencial.domain;
+package dev.wakandaacademy.produdoro.credencial.domain;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.FieldType;

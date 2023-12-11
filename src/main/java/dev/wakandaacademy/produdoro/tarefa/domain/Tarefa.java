@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import dev.wakandaacademy.produdoro.usuario.domain.StatusUsuario;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
